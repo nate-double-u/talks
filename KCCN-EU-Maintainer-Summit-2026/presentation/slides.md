@@ -1,13 +1,18 @@
 ---
 marp: true
-theme: default
+theme: cncf
 paginate: true
+footer: '<span class="footer-license">| CC BY 4.0 — Cloud Native Computing Foundation</span><img class="footer-logo" src="images/cncf-icon-black.svg" alt="CNCF">'
 title: "Agentic AI for Maintainers: Getting the Most from GitHub Copilot Enterprise"
 author: Nate Waddington
 ---
 
-<!-- _class: lead -->
+<!-- _class: title -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
 <!-- SLIDE 1 — Act 1: Why This Matters -->
+
+![w:300](images/cncf-color.svg)
 
 # Agentic AI for Maintainers
 
@@ -502,8 +507,10 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 17 (References — last slide) -->
-<!-- _class: lead -->
+<!-- SLIDE 17 (References 1/3) -->
+<!-- _class: references -->
+
+# References
 
 **[1]** Brynjolfsson, E., Chandar, B., & Chen, R. "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence." Stanford Digital Economy Lab, November 2025.
 https://digitaleconomy.stanford.edu/app/uploads/2025/11/CanariesintheCoalMine_Nov25.pdf
@@ -514,6 +521,13 @@ https://github.blog/ai-and-ml/github-copilot/5-ways-to-transform-your-workflow-u
 **[3]** "Copilot Coding Agent Now Automatically Validates Code Security and Quality." GitHub Changelog, October 2025.
 https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-automatically-validates-code-security-and-quality/
 
+---
+
+<!-- SLIDE 18 (References 2/3) -->
+<!-- _class: references -->
+
+# References (continued)
+
 **[4]** "The Difference Between Coding Agent and Agent Mode in GitHub Copilot." GitHub Blog.
 https://github.blog/developer-skills/github/less-todo-more-done-the-difference-between-coding-agent-and-agent-mode-in-github-copilot/
 
@@ -522,6 +536,13 @@ https://docs.github.com/en/copilot/tutorials/use-custom-instructions
 
 **[6]** "How to Write a Great agents.md: Lessons from Over 2,500 Repositories." GitHub Blog.
 https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/
+
+---
+
+<!-- SLIDE 19 (References 3/3) -->
+<!-- _class: references -->
+
+# References (continued)
 
 **[7]** "Creating Custom Agents for Copilot Coding Agent." GitHub Docs.
 https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/create-custom-agents

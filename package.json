@@ -4,8 +4,8 @@
   "private": true,
   "description": "CNCF presentation decks built with Marp",
   "scripts": {
-    "build": "marp KCCN-EU-Maintainer-Summit-2026/presentation/slides.md --html -o dist/index.html",
-    "preview": "marp KCCN-EU-Maintainer-Summit-2026/presentation/slides.md --html --preview"
+    "build": "marp KCCN-EU-Maintainer-Summit-2026/presentation/slides.md --html --theme KCCN-EU-Maintainer-Summit-2026/presentation/theme/cncf.css -o dist/index.html",
+    "preview": "marp KCCN-EU-Maintainer-Summit-2026/presentation/slides.md --html --theme KCCN-EU-Maintainer-Summit-2026/presentation/theme/cncf.css --preview"
   },
   "author": "Nate Waddington",
   "license": "Apache-2.0",
