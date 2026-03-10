@@ -11,4 +11,4 @@ These are linked rather than bundled, as they have their own copyright and licen
 
 - **"Lessons from CNCF KubeStellar's Agentic Workflow Experiments"**
   Anderson, A., Wolf, A., & Waddington, N.
-  Presented at KubeCon NA 2025.
+  Presented at Linux Members Summit 2026.
