@@ -22,4 +22,5 @@ Slides are built via GitHub Actions on push to `main` and deployed to Netlify.
 
 ## License
 
-[CC-BY-4.0](LICENSE)
+Documentation and presentation content are licensed under [CC-BY-4.0](LICENSE-CC-BY-4.0).
+Code (CSS, build scripts, HTML) is licensed under [Apache-2.0](LICENSE-APACHE-2.0).
