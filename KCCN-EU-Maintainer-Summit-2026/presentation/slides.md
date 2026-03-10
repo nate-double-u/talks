@@ -48,14 +48,13 @@ CNCF has partnered with GitHub to provide **Copilot Enterprise** to project main
 
 Apply at **[servicedesk.cncf.io](https://servicedesk.cncf.io)** → Program Management
 
-> [contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers](https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers)
-
 <!--
 Speaker notes:
 - Quick context: this exists, it's free for maintainers, here's what's in it
 - Don't linger — the audience wants to know HOW to use it, not WHAT it is
 - Mention eligibility: verified against maintainers.cncf.io
-- If they haven't applied yet, the link is on the resources slide at the end too
+- Blog announcement: [12] contribute.cncf.io
+- If they haven't applied yet, the link is on the references slide at the end
 -->
 
 ---
@@ -64,10 +63,10 @@ Speaker notes:
 
 # Augmentation, Not Automation
 
-**Two findings from Stanford's Digital Economy Lab (2025):**
+### Two findings from Stanford's Digital Economy Lab (2025):
 
-- In occupations where AI **automates** work, early-career workers experienced a **16% relative employment decline**. [1]
-- In occupations where AI **augments** work, employment growth remained stable — even in the most AI-exposed roles. [1]
+- In occupations where AI **automates** work, early-career workers experienced a **16% relative employment decline**. <sup>[1]</sup>
+- In occupations where AI **augments** work, employment growth remained stable — even in the most AI-exposed roles. <sup>[1]</sup>
 
 ### What this means for maintainers:
 
@@ -118,6 +117,7 @@ Speaker notes:
 
 <!-- SLIDE 5 -->
 
+
 # Agent Mode: Your Pair Programmer
 
 **Synchronous, in your editor.** You give it a goal in natural language; it plans, edits files, runs commands, reads failures, fixes them, and loops — while you watch and steer.
@@ -129,25 +129,33 @@ Speaker notes:
 - Debugging — let it read errors and iterate
 - Refactoring with immediate feedback
 
-### Tips for better results:
-
-- **Be specific:** "Add a health check endpoint to the API server" beats "help with the API"
-- **Seed context:** Point it at the spec file, paste a schema, reference an issue
-- **Extend with MCP:** Connect external tools (databases, APIs, other repos) [2]
-
 <!--
 Speaker notes:
 - This is the "senior dev pair programming with you" metaphor
 - SHOW a screenshot or short recording here: agent mode tackling a real task
 - Key point: you're in the loop the whole time — this is augmentation
-- MCP = Model Context Protocol, an open standard for connecting AI to external tools
 - Agent mode supports multiple models — mention the model picker briefly
-- [2] = GitHub blog on MCP, add to references
 -->
 
 ---
 
 <!-- SLIDE 6 -->
+
+# Agent Mode: Tips for Better Results
+
+- **Be specific:** "Add a health check endpoint to the API server" beats "help with the API"
+- **Seed context:** Point it at the spec file, paste a schema, reference an issue
+- **Extend with MCP:** Connect external tools (databases, APIs, other repos) <sup>[2]</sup>
+
+<!--
+Speaker notes:
+- MCP = Model Context Protocol, an open standard for connecting AI to external tools
+- [2] = GitHub blog on MCP, add to references
+-->
+
+---
+
+<!-- SLIDE 7 -->
 
 # Coding Agent: Your Async Teammate
 
@@ -159,6 +167,23 @@ Speaker notes:
 2. Assign the issue to **Copilot**
 3. Copilot creates a branch, implements, runs CI
 4. You get a PR — review, comment, request changes, or merge
+
+<!--
+Speaker notes:
+- This is the "diligent teammate clearing the backlog" metaphor
+- SHOW a screenshot here: an issue assigned to Copilot → the resulting PR
+- Emphasize: it runs YOUR CI pipeline, YOUR linters, YOUR tests — it follows your rules
+- Built-in security: CodeQL, secret scanning, dependency checks run automatically [3]
+- Each run consumes GitHub Actions minutes AND premium requests — be strategic
+- [3] = GitHub changelog on security validation
+-->
+
+---
+
+<!-- SLIDE 8 -->
+
+# Coding Agent: What Works
+## (and What Doesn't)
 
 ### Sweet-spot tasks:
 
@@ -174,22 +199,17 @@ Speaker notes:
 
 <!--
 Speaker notes:
-- This is the "diligent teammate clearing the backlog" metaphor
-- SHOW a screenshot here: an issue assigned to Copilot → the resulting PR
-- Emphasize: it runs YOUR CI pipeline, YOUR linters, YOUR tests — it follows your rules
-- Built-in security: CodeQL, secret scanning, dependency checks run automatically [3]
-- Each run consumes GitHub Actions minutes AND premium requests — be strategic
 - The coding agent can also see images in issues (screenshots, mockups) via vision models
-- [3] = GitHub changelog on security validation
+- Stress: pick something small and well-tested for the first try
 -->
 
 ---
 
-<!-- SLIDE 7 -->
+<!-- SLIDE 9 -->
 
 # Agentic Workflows: Continuous AI
 
-**Automated, in GitHub Actions.** Define maintenance tasks in Markdown. Coding agents execute them on a schedule — daily, on events, or on demand. [10]
+**Automated, in GitHub Actions.** Define maintenance tasks in Markdown. Coding agents execute them on a schedule — daily, on events, or on demand. <sup>[10]</sup>
 
 ### What it looks like:
 
@@ -198,32 +218,40 @@ Speaker notes:
 3. It runs via GitHub Actions using a coding agent
 4. Results appear as comments, labels, issues, or PRs — you review
 
-### Maintainer use cases:
+<!--
+Speaker notes:
+- "Continuous AI" — GitHub Next's framing, parallel to CI/CD
+- Guardrails: read-only by default, safe outputs constrain what the agent can do
+  (specific labels only, title-prefixed PRs only, never merges)
+- Technical preview as of Feb 2026
+- [10] = GitHub blog on agentic workflows
+-->
+
+---
+
+<!-- SLIDE 10 -->
+
+# Agentic Workflows: Maintainer Use Cases
 
 - **Continuous triage** — label, summarize, and route new issues
 - **Continuous documentation** — keep READMEs aligned with code changes
 - **Continuous testing** — assess coverage and add high-value tests
 - **Continuous quality** — investigate CI failures and propose fixes
-- **Backlog processing** — systematically work through stale issues [11]
+- **Backlog processing** — systematically work through stale issues <sup>[11]</sup>
 
 <!--
 Speaker notes:
-- "Continuous AI" — GitHub Next's framing, parallel to CI/CD
 - Don Syme's Repo Assist is a concrete example: cleared years of backlog
   across 4 F# repos in a weekend using this
-- Guardrails: read-only by default, safe outputs constrain what the agent can do
-  (specific labels only, title-prefixed PRs only, never merges)
 - Repo Memory: the workflow remembers where it left off between runs,
   so it works systematically through your backlog
 - Cost: each run typically uses 2 premium requests with Copilot defaults
-- Technical preview as of Feb 2026
-- [10] = GitHub blog on agentic workflows
 - [11] = Don Syme's blog post on Repo Assist
 -->
 
 ---
 
-<!-- SLIDE 8 -->
+<!-- SLIDE 11 -->
 
 # When to Use Which
 
@@ -236,7 +264,7 @@ Speaker notes:
 
 ### The combined workflow:
 
-**Prototype in agent mode** → **file an issue** → **coding agent implements** → **agentic workflows maintain** → **code review catches issues** → **you merge** [4]
+**Prototype in agent mode** → **file an issue** → **coding agent implements** → **agentic workflows maintain** → **code review catches issues** → **you merge** <sup>[4]</sup>
 
 <!--
 Speaker notes:
@@ -252,11 +280,14 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 9 -->
+<!-- SLIDE 12 -->
 
 # Teaching Copilot Your Project
 
 Two files that change everything:
+
+1. `.github/copilot-instructions.md`
+2. `AGENTS.md`
 
 ### `.github/copilot-instructions.md` — Your project's house rules
 
@@ -266,6 +297,22 @@ Copilot reads this on every interaction. Put your conventions here:
 - Testing requirements and preferred frameworks
 - Architectural decisions and legacy constraints
 
+<!--
+Speaker notes:
+- This is where the talk gets actionable — these are files they can add TODAY
+- copilot-instructions.md: first 4,000 characters matter most for code review
+- SHOW a real example from the companion repo here
+- You can also use path-specific instructions (.github/instructions/*.instructions.md)
+  with applyTo frontmatter for rules that only apply to certain file types/paths
+- [5] = GitHub docs on custom instructions
+-->
+
+---
+
+<!-- SLIDE 13 -->
+
+# Teaching Copilot Your Project
+
 ### `AGENTS.md` — What the coding agent can and can't do
 
 Defines the agent's persona, available commands, and boundaries:
@@ -273,48 +320,52 @@ Defines the agent's persona, available commands, and boundaries:
 - File boundaries: "never edit files in `/legacy`"
 - Behavioral constraints: "never commit secrets"
 
-Both live in your repo, versioned alongside your code. [5] [6]
+Both live in your repo, versioned alongside your code. <sup>[5]</sup> <sup>[6]</sup>
 
 <!--
 Speaker notes:
-- This is where the talk gets actionable — these are files they can add TODAY
-- copilot-instructions.md: first 4,000 characters matter most for code review
 - AGENTS.md: think of it like onboarding instructions for a new contributor
 - SHOW a real example from the companion repo here
-- You can also use path-specific instructions (.github/instructions/*.instructions.md)
-  with applyTo frontmatter for rules that only apply to certain file types/paths
-- [5] = GitHub docs on custom instructions
 - [6] = GitHub blog on writing great AGENTS.md
 -->
 
 ---
 
-<!-- SLIDE 10 -->
+<!-- SLIDE 14 -->
 
-# Custom Agents & Cross-Repo Workflows
+# Custom Agents
 
-### Custom agents — specialist personas for your project
+### Specialist personas for your project
 
 Define them in `.github/agents/*.agent.md` — you create whatever specialists your project needs. Examples:
 - A **docs agent** that only touches documentation files
 - A **test agent** that writes and maintains test suites
 - A **triage agent** that labels and categorizes issues
 
-Each has its own persona, commands, and file boundaries. [7]
+Each has its own persona, commands, and file boundaries. <sup>[7]</sup>
 
-### Cross-repo work with MCP
+<!--
+Speaker notes:
+- Custom agents are powerful for large projects with distinct areas of concern
+- Example: KubeStellar used label-driven routing to direct work — custom agents formalize this
+- [7] = GitHub docs on creating custom agents
+-->
+
+---
+
+<!-- SLIDE 15 -->
+
+# Cross-Repo Workflows with MCP
 
 The Model Context Protocol gives agent mode *research access* across your organization:
 - Search issues, PRs, and code in other repos you have access to
 - Check CI status and review workflow results in related repositories
 - Query external systems (APIs, databases, project trackers)
 
-MCP enables cross-repo **understanding** — research and context, not multi-repo edits. [2]
+MCP enables cross-repo **understanding** — research and context, not multi-repo edits. <sup>[2]</sup>
 
 <!--
 Speaker notes:
-- Custom agents are powerful for large projects with distinct areas of concern
-- Example: KubeStellar used label-driven routing to direct work — custom agents formalize this
 - IMPORTANT NUANCE on cross-repo:
   - MCP gives agent mode "eyes" into other repos (search, read, check status) via the GitHub API
   - But the actual code edits from agent mode still happen in your local workspace
@@ -326,12 +377,11 @@ Speaker notes:
 - For the audience: "Think of MCP as giving Copilot read access across your org,
   while the coding agent handles the writes one repo at a time"
 - Don't go too deep on MCP setup — point to the docs, show the companion repo example
-- [7] = GitHub docs on creating custom agents
 -->
 
 ---
 
-<!-- SLIDE 11 (cut candidate) -->
+<!-- SLIDE 16 (cut candidate) -->
 
 # The Broader Ecosystem: AAIF
 
@@ -343,7 +393,7 @@ In December 2025, the Linux Foundation created the **Agentic AI Foundation (AAIF
 - **AGENTS.md** — the standard for agent instruction files. Contributed by OpenAI.
 - **Goose** — an open-source, local-first agent runtime. Contributed by Block.
 
-MCP and AGENTS.md aren't GitHub-only concepts — they're **open standards** governed by the Linux Foundation, the same umbrella as the CNCF. [9]
+MCP and AGENTS.md aren't GitHub-only concepts — they're **open standards** governed by the Linux Foundation, the same umbrella as the CNCF. <sup>[9]</sup>
 
 <!--
 Speaker notes:
@@ -362,9 +412,10 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 12 -->
+<!-- SLIDE 17 -->
 
-# Security Is Built In (But You Still Review)
+# Security Is Built In
+## (But You Still Review)
 
 ### What runs automatically on every coding agent PR:
 
@@ -373,26 +424,13 @@ Speaker notes:
 - **Dependency checks** against the GitHub Advisory Database
 - **Automated code review** for quality issues
 
-The agent attempts to fix issues before submitting the PR. [3]
-
-### Your responsibilities:
-
-- Review all agent-generated PRs — agents accelerate, they don't replace your judgment
-- Enterprise code is **not** used to train Copilot models
-- The LF AI policy [8] is the baseline — projects can add stricter guidance, but not looser
+The agent attempts to fix issues before submitting the PR. <sup>[3]</sup>
 
 <!--
 Speaker notes:
 - This is where you tie security back to augmentation: the tooling catches a lot, but YOU are the reviewer
 - The security checks run without extra licensing — included in Enterprise
-- IP considerations: Microsoft provides indemnification for unmodified Copilot suggestions,
-  but maintainers should still review for license compatibility
-- Invisible character attacks are a known research concern — compromised upstream code
-  could influence suggestions. Good reason to review carefully.
-- LF AI guidance core principles: AI contributions accepted, but contributors must ensure
-  no licensing conflicts and must attribute third-party materials. This is the FLOOR —
-  projects can tighten (e.g., "no AI-generated code without review") but can't be looser.
-- [8] = LF generative AI policy
+- [3] = GitHub changelog on security validation
 - TODO: Review CodeQL docs to be able to explain it in detail if asked:
   https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql
   Key points: static analysis engine, treats code as queryable data, finds security vulns (not style),
@@ -401,7 +439,30 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 13 -->
+<!-- SLIDE 18 -->
+
+# Security Is Built In
+## What You Should Know
+
+- Review all agent-generated PRs — agents accelerate, they don't replace your judgment
+- Enterprise code is **not** used to train Copilot models
+- The LF AI policy <sup>[8]</sup> is the baseline — projects can add stricter guidance, but not looser
+
+<!--
+Speaker notes:
+- IP considerations: Microsoft provides indemnification for unmodified Copilot suggestions,
+  but maintainers should still review for license compatibility
+- Invisible character attacks are a known research concern — compromised upstream code
+  could influence suggestions. Good reason to review carefully.
+- LF AI guidance core principles: AI contributions accepted, but contributors must ensure
+  no licensing conflicts and must attribute third-party materials. This is the FLOOR —
+  projects can tighten (e.g., "no AI-generated code without review") but can't be looser.
+- [8] = LF generative AI policy
+-->
+
+---
+
+<!-- SLIDE 19 -->
 
 # Real-World: KubeStellar's Agentic Experiment
 
@@ -440,7 +501,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 14 -->
+<!-- SLIDE 20 -->
 
 # The Pattern That Works
 
@@ -473,7 +534,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 15 — Act 3: Your Next Move -->
+<!-- SLIDE 21 — Act 3: Your Next Move -->
 
 # Your Next Monday Back
 
@@ -504,7 +565,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 16 -->
+<!-- SLIDE 22 -->
 
 # Resources
 
@@ -513,24 +574,21 @@ Speaker notes:
 - Blog post: [contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers](https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers)
 
 ### GitHub Docs & Blog Posts
-- Custom instructions: [docs.github.com/en/copilot/tutorials/use-custom-instructions](https://docs.github.com/en/copilot/tutorials/use-custom-instructions) [5]
-- Writing great AGENTS.md: [github.blog/.../how-to-write-a-great-agents-md...](https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/) [6]
-- Agent mode vs. coding agent: [github.blog/.../less-todo-more-done...](https://github.blog/developer-skills/github/less-todo-more-done-the-difference-between-coding-agent-and-agent-mode-in-github-copilot/) [4]
-
-### Companion Repo
-- TODO: Add companion repo link here
+- Custom instructions: [docs.github.com/en/copilot/tutorials/use-custom-instructions](https://docs.github.com/en/copilot/tutorials/use-custom-instructions) <sup>[5]</sup>
+- Writing great AGENTS.md: [github.blog/.../how-to-write-a-great-agents-md...](https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/) <sup>[6]</sup>
+- Agent mode vs. coding agent: [github.blog/.../less-todo-more-done...](https://github.blog/developer-skills/github/less-todo-more-done-the-difference-between-coding-agent-and-agent-mode-in-github-copilot/) <sup>[4]</sup>
 
 <!--
 Speaker notes:
 - This is the "take a photo of this slide" moment
-- All the references are also on the next slide with full citations
-- The companion repo has working examples of copilot-instructions.md, AGENTS.md,
-  custom agents, and MCP config — they can fork it and adapt
+- All the references are also on the next slides with full citations
+- TODO: Add companion repo section back once repo is created. Include working examples
+  of copilot-instructions.md, AGENTS.md, custom agents, and MCP config — they can fork and adapt
 -->
 
 ---
 
-<!-- SLIDE 17 -->
+<!-- SLIDE 23 -->
 <!-- _class: lead -->
 
 # Questions?
@@ -548,7 +606,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 18 (References 1/4) -->
+<!-- SLIDE 24 (References 1/4) -->
 <!-- _class: references -->
 
 # References
@@ -564,7 +622,7 @@ https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-automatically-
 
 ---
 
-<!-- SLIDE 19 (References 2/4) -->
+<!-- SLIDE 25 (References 2/4) -->
 <!-- _class: references -->
 
 # References (continued)
@@ -580,7 +638,7 @@ https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-less
 
 ---
 
-<!-- SLIDE 20 (References 3/4) -->
+<!-- SLIDE 26 (References 3/4) -->
 <!-- _class: references -->
 
 # References (continued)
@@ -596,7 +654,7 @@ https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-o
 
 ---
 
-<!-- SLIDE 21 (References 4/4) -->
+<!-- SLIDE 27 (References 4/4) -->
 <!-- _class: references -->
 
 # References (continued)
@@ -606,3 +664,6 @@ https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-work
 
 **[11]** Syme, D. "Repo Assist: A Repository Assistant." February 2026.
 https://dsyme.net/2026/02/25/repo-assist-a-repository-assistant/
+
+**[12]** "GitHub Copilot Enterprise for CNCF Maintainers." CNCF Contributor Blog, December 2025.
+https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers
