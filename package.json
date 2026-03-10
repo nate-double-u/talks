@@ -11,7 +11,7 @@
     "preview:kccn-eu-2026": "marp KCCN-EU-Maintainer-Summit-2026/presentation/slides.md --html --theme KCCN-EU-Maintainer-Summit-2026/presentation/theme/cncf.css --preview"
   },
   "author": "Nate Waddington",
-  "license": "CC-BY-4.0",
+  "license": "Apache-2.0 AND CC-BY-4.0",
   "devDependencies": {
     "@marp-team/marp-cli": "^4.2.3"
   }

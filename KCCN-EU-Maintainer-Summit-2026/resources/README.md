@@ -1,5 +1,7 @@
 # Reference Materials
 
+> **DRAFT** — This talk has not yet been presented.
+
 External papers and presentations referenced while developing this talk.
 These are linked rather than bundled, as they have their own copyright and licensing.
 

@@ -23,6 +23,8 @@ Head of Mentorship & Documentation, CNCF
 
 Maintainer Summit — KubeCon + CloudNativeCon Europe 2026
 
+<small>March 22, 2026 · DRAFT</small>
+
 <!--
 Speaker notes:
 - Welcome, introduce yourself
