@@ -93,22 +93,25 @@ Speaker notes:
 
 # The Agentic Spectrum
 
-| | Completions | Chat | Agent Mode | Coding Agent |
-|---|---|---|---|---|
-| **Where** | Editor | Editor sidebar | Editor | GitHub cloud |
-| **Interaction** | Keystroke | Conversational | Real-time loop | Async / background |
-| **Autonomy** | You drive | You ask, it answers | It plans and acts; you steer | It works alone; you review |
-| **Output** | Code snippets | Answers + code | Multi-file changes | Branch + PR |
+| | Completions | Chat | Agent Mode | Coding Agent | Agentic Workflows |
+|---|---|---|---|---|---|
+| **Where** | Editor | Editor sidebar | Editor | GitHub cloud | GitHub Actions |
+| **Interaction** | Keystroke | Conversational | Real-time loop | Async / background | Scheduled / event-driven |
+| **Autonomy** | You drive | You ask, it answers | It plans and acts; you steer | It works alone; you review | It runs continuously; you oversee |
+| **Output** | Code snippets | Answers + code | Multi-file changes | Branch + PR | PRs, labels, comments, reports |
 
-Today we're focusing on the right side: **agent mode** and the **coding agent**.
+Today we're focusing on the right side: **agent mode**, the **coding agent**, and **agentic workflows**.
 
 <!--
 Speaker notes:
 - This is a quick visual overview — don't spend more than 90 seconds here
 - The progression left to right is: increasing autonomy, decreasing real-time oversight
 - Most maintainers are already using completions and chat
-- The new capabilities (agent mode and coding agent) are what this talk is about
-- Sets up the next two slides
+- New column: Agentic Workflows (technical preview, Feb 2026) — the "Continuous AI" layer
+- Think of it as CI/CD for AI-assisted maintenance: triage, docs sync, test improvement
+- Authored in Markdown, executed by coding agents in GitHub Actions
+- Read-only by default with safe outputs — strong guardrails by design
+- Sets up the next three slides
 -->
 
 ---
@@ -184,32 +187,72 @@ Speaker notes:
 
 <!-- SLIDE 7 -->
 
+# Agentic Workflows: Continuous AI
+
+**Automated, in GitHub Actions.** Define maintenance tasks in Markdown. Coding agents execute them on a schedule — daily, on events, or on demand. [10]
+
+### What it looks like:
+
+1. Author a workflow in `.github/workflows/my-workflow.md`
+2. Describe the goal in plain language (not YAML)
+3. It runs via GitHub Actions using a coding agent
+4. Results appear as comments, labels, issues, or PRs — you review
+
+### Maintainer use cases:
+
+- **Continuous triage** — label, summarize, and route new issues
+- **Continuous documentation** — keep READMEs aligned with code changes
+- **Continuous testing** — assess coverage and add high-value tests
+- **Continuous quality** — investigate CI failures and propose fixes
+- **Backlog processing** — systematically work through stale issues [11]
+
+<!--
+Speaker notes:
+- "Continuous AI" — GitHub Next's framing, parallel to CI/CD
+- Don Syme's Repo Assist is a concrete example: cleared years of backlog
+  across 4 F# repos in a weekend using this
+- Guardrails: read-only by default, safe outputs constrain what the agent can do
+  (specific labels only, title-prefixed PRs only, never merges)
+- Repo Memory: the workflow remembers where it left off between runs,
+  so it works systematically through your backlog
+- Cost: each run typically uses 2 premium requests with Copilot defaults
+- Technical preview as of Feb 2026
+- [10] = GitHub blog on agentic workflows
+- [11] = Don Syme's blog post on Repo Assist
+-->
+
+---
+
+<!-- SLIDE 8 -->
+
 # When to Use Which
 
-| | Agent Mode | Coding Agent |
-|---|---|---|
-| **You want to...** | Explore, prototype, debug | Clear backlog, batch work |
-| **Your role** | Steering in real time | Reviewing a PR later |
-| **Best when...** | You need tight feedback loops | The task is well-scoped with tests |
-| **Think of it as...** | Pair programming | Delegating a ticket |
+| | Agent Mode | Coding Agent | Agentic Workflows |
+|---|---|---|---|
+| **You want to...** | Explore, prototype, debug | Clear backlog, batch work | Automate ongoing maintenance |
+| **Your role** | Steering in real time | Reviewing a PR later | Overseeing a continuous process |
+| **Best when...** | You need tight feedback loops | The task is well-scoped with tests | The work is repetitive and recurring |
+| **Think of it as...** | Pair programming | Delegating a ticket | Hiring a night shift |
 
 ### The combined workflow:
 
-**Prototype in agent mode** → **file an issue** → **coding agent implements** → **code review catches issues** → **you merge** [4]
+**Prototype in agent mode** → **file an issue** → **coding agent implements** → **agentic workflows maintain** → **code review catches issues** → **you merge** [4]
 
 <!--
 Speaker notes:
 - This is the "peanut butter and jelly" slide — they're meant to be used together
 - Walk through the power pattern with a concrete example:
   "I used agent mode to spike a health check endpoint, got it working, then filed issues
-   for the coding agent to add tests and update the README"
+   for the coding agent to add tests and update the README. Agentic workflows keep
+   the docs in sync and triage new issues going forward."
 - Cite: [4] GitHub blog on agent mode vs coding agent
-- Key takeaway: agent mode for novel work, coding agent for well-defined work
+- Key takeaway: agent mode for novel work, coding agent for well-defined work,
+  agentic workflows for the recurring stuff nobody wants to do manually
 -->
 
 ---
 
-<!-- SLIDE 8 -->
+<!-- SLIDE 9 -->
 
 # Teaching Copilot Your Project
 
@@ -246,7 +289,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 9 -->
+<!-- SLIDE 10 -->
 
 # Custom Agents & Cross-Repo Workflows
 
@@ -288,7 +331,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 10 (cut candidate) -->
+<!-- SLIDE 11 (cut candidate) -->
 
 # The Broader Ecosystem: AAIF
 
@@ -300,9 +343,7 @@ In December 2025, the Linux Foundation created the **Agentic AI Foundation (AAIF
 - **AGENTS.md** — the standard for agent instruction files. Contributed by OpenAI.
 - **Goose** — an open-source, local-first agent runtime. Contributed by Block.
 
-### Why this matters:
-
-The tools we've been discussing aren't GitHub-only concepts. MCP and AGENTS.md are **open standards** governed by the Linux Foundation — the same umbrella as the CNCF. [9]
+MCP and AGENTS.md aren't GitHub-only concepts — they're **open standards** governed by the Linux Foundation, the same umbrella as the CNCF. [9]
 
 <!--
 Speaker notes:
@@ -321,7 +362,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 11 -->
+<!-- SLIDE 12 -->
 
 # Security Is Built In (But You Still Review)
 
@@ -360,7 +401,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 12 -->
+<!-- SLIDE 13 -->
 
 # Real-World: KubeStellar's Agentic Experiment
 
@@ -399,7 +440,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 13 -->
+<!-- SLIDE 14 -->
 
 # The Pattern That Works
 
@@ -432,7 +473,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 14 — Act 3: Your Next Move -->
+<!-- SLIDE 15 — Act 3: Your Next Move -->
 
 # Your Next Monday Back
 
@@ -463,7 +504,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 15 -->
+<!-- SLIDE 16 -->
 
 # Resources
 
@@ -489,7 +530,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 16 -->
+<!-- SLIDE 17 -->
 <!-- _class: lead -->
 
 # Questions?
@@ -507,7 +548,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 17 (References 1/3) -->
+<!-- SLIDE 18 (References 1/4) -->
 <!-- _class: references -->
 
 # References
@@ -523,7 +564,7 @@ https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-automatically-
 
 ---
 
-<!-- SLIDE 18 (References 2/3) -->
+<!-- SLIDE 19 (References 2/4) -->
 <!-- _class: references -->
 
 # References (continued)
@@ -539,7 +580,7 @@ https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-less
 
 ---
 
-<!-- SLIDE 19 (References 3/3) -->
+<!-- SLIDE 20 (References 3/4) -->
 <!-- _class: references -->
 
 # References (continued)
@@ -552,3 +593,16 @@ https://www.linuxfoundation.org/legal/generative-ai
 
 **[9]** "Linux Foundation Announces the Formation of the Agentic AI Foundation (AAIF)." The Linux Foundation, December 2025.
 https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation
+
+---
+
+<!-- SLIDE 21 (References 4/4) -->
+<!-- _class: references -->
+
+# References (continued)
+
+**[10]** "Automate Repository Tasks with GitHub Agentic Workflows." GitHub Blog, February 2026.
+https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/
+
+**[11]** Syme, D. "Repo Assist: A Repository Assistant." February 2026.
+https://dsyme.net/2026/02/25/repo-assist-a-repository-assistant/
