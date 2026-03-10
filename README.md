@@ -20,4 +20,4 @@ Slides are built via GitHub Actions on push to `main` and deployed to Netlify.
 
 ## License
 
-Apache-2.0
+[CC-BY-4.0](LICENSE)
