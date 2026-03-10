@@ -4,8 +4,8 @@ Presentation decks built with [Marp](https://marp.app/).
 
 ## Talks
 
-- **Agentic AI for Maintainers: Getting the Most from GitHub Copilot Enterprise - DRAFT**
-  KubeCon EU 2026 · Maintainer Summit · Amsterdam · March 22, 2026
+- **Agentic AI for Maintainers: Getting the Most from GitHub Copilot Enterprise - DRAFT**  
+  KubeCon EU 2026 · Maintainer Summit · Amsterdam · March 22, 2026  
   [slides](KCCN-EU-Maintainer-Summit-2026/presentation/slides.md) · [live deck](https://nate-double-u-talks.netlify.app/kccn-eu-2026/) · [sched](https://maintainersummiteu2026.sched.com/event/2EWes/agentic-ai-for-maintainers-getting-the-most-from-github-copilot-enterprise-nate-waddington-cncf)
 
 ## Development
