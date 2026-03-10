@@ -1,0 +1,219 @@
+/* @theme cncf */
+@import 'default';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&display=swap');
+
+/* --- CNCF Color Palette --- */
+
+:root {
+  --cncf-blue: #0086FF;
+  --cncf-accent-blue: #4285F4;
+  --cncf-black: #000000;
+  --cncf-dark: #222222;
+  --cncf-pink: #D62293;
+  --cncf-gray: #666666;
+  --cncf-light-gray: #B7B7B7;
+  --cncf-stone: #E5E5E5;
+  --cncf-white: #FFFFFF;
+}
+
+/* --- Base Slide Styles --- */
+
+section {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--cncf-white);
+  color: var(--cncf-dark);
+  padding: 48px 64px;
+  border-top: 4px solid var(--cncf-pink);
+}
+
+/* --- Typography --- */
+
+h1 {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 800;
+  color: var(--cncf-black);
+}
+
+h2 {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: var(--cncf-black);
+}
+
+h3 {
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 600;
+  color: var(--cncf-gray);
+}
+
+strong {
+  font-weight: 700;
+  color: var(--cncf-black);
+}
+
+/* --- Links --- */
+
+a {
+  color: var(--cncf-accent-blue);
+  text-decoration: underline;
+}
+
+/* --- Code --- */
+
+code {
+  background-color: var(--cncf-stone);
+  color: var(--cncf-dark);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9em;
+}
+
+pre code {
+  padding: 16px;
+  border-left: 4px solid var(--cncf-pink);
+}
+
+/* --- Tables --- */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: var(--cncf-black);
+  color: var(--cncf-white);
+  font-weight: 600;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid var(--cncf-stone);
+  padding: 8px 12px;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* --- Blockquotes --- */
+
+blockquote {
+  border-left: 4px solid var(--cncf-pink);
+  background-color: #fdf2f8;
+  padding: 12px 24px;
+  margin: 16px 0;
+  color: var(--cncf-dark);
+}
+
+/* --- Title Slide --- */
+
+section.title {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.title h1 {
+  color: var(--cncf-black);
+  margin-bottom: 4px;
+}
+
+section.title h2 {
+  color: var(--cncf-blue);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+/* --- Lead Slides (questions, references) --- */
+
+section.lead {
+  background-color: var(--cncf-white);
+  color: var(--cncf-black);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 4px solid var(--cncf-pink);
+}
+
+section.lead h1 {
+  color: var(--cncf-black);
+}
+
+section.lead h2 {
+  color: var(--cncf-blue);
+  font-weight: 600;
+}
+
+section.lead a {
+  color: var(--cncf-accent-blue);
+}
+
+section.lead strong {
+  color: var(--cncf-accent-blue);
+}
+
+/* --- References Slides --- */
+
+section.references {
+  padding-bottom: 64px;
+}
+
+section.references p {
+  margin: 0.15em 0;
+  line-height: 1.3;
+}
+
+section.references a {
+  word-break: break-all;
+}
+
+/* --- Page Number (left-aligned) --- */
+
+section::after {
+  color: var(--cncf-light-gray);
+  font-weight: 400;
+  font-size: 0.55em;
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  right: auto;
+  top: auto;
+}
+
+/* --- Lists --- */
+
+ul, ol {
+  line-height: 1.6;
+}
+
+/* --- Footer --- */
+
+footer {
+  font-size: 0.55em;
+  color: var(--cncf-light-gray);
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 64px 0 52px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer-license {
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 0;
+}
+
+.footer-logo {
+  position: absolute;
+  right: 64px;
+  height: 24px;
+  width: auto;
+}
