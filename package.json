@@ -1,0 +1,15 @@
+{
+  "name": "cncf-talks",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CNCF presentation decks built with Marp",
+  "scripts": {
+    "build": "marp KCCN-EU-Maintainer-Summit-2026/presentation/slides.md --html -o dist/index.html",
+    "preview": "marp KCCN-EU-Maintainer-Summit-2026/presentation/slides.md --html --preview"
+  },
+  "author": "Nate Waddington",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.2.3"
+  }
+}

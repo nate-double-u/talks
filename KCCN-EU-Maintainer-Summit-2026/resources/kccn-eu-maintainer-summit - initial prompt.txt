@@ -1,0 +1,62 @@
+I've been accepted to do a talk for KubeCon EU's Maintainer summit. Here are some of the details:
+
+---
+
+  event: Maintainer Summit: KubeCon + CloudNativeCon Europe 2026
+
+  session title: Agentic AI for Maintainers: Getting the Most from GitHub Copilot
+  Enterprise
+
+  Description
+
+  he CNCF has partnered with GitHub to provide Enterprise Copilot for maintainers—but
+  how do you actually use these agentic tools effectively? This session shares practical
+   strategies for leveraging Copilot's full spectrum of agentic capabilities in your
+  maintainer workflows.
+
+  We'll move beyond basic code completion to explore agent mode and the coding agent,
+  showing when each makes sense for different tasks. You'll see how to create custom
+  instructions that teach Copilot your project's conventions, and how to use Copilot for
+   cross-repository research and work.
+
+  Key topics:
+  - Agent mode vs. coding agent: when to use each
+  - Custom instructions (.github/copilot-instructions.md)
+  - Cross-repo workflows
+  - Security considerations for open source
+
+  Whether you maintain a sandbox or graduated project, leave with practical approaches
+  you can implement immediately.
+
+  ---
+
+  Here is some more context:
+  https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers
+
+  Also, in this folder is a talk i did with Andy Anderson and Ashley Wolf. It's a good
+  example of the kind of work i'm hoping to explain. You can find the presentation deck
+  in this folder: Lessons from CNCF KubeStellar's Agentic Workflow Experiments-1.pdf
+
+  I can reach out to GitHub staff, as well as CNCF staff, and project maintainers to
+  help validate and verify this deck. 
+
+  This session will be about 35 minutes, and I'd like to give a little time at the end
+  for questions.
+
+  Please help me draft this. I need to understand the current state of the art at
+  GitHub. I'd also like to set up a toy project to use as a demo. We can use this folder
+   to start a repository. Let's draft the talk using `marp`, I'll move the content to
+  GSlides later when we get the content in. Start by helping me understand the current
+  lay of the land, then let's outline the talk, and then we can discuss how to do the
+  demo (if needed), if you dont' think a demo is necessary, let me know. I'd like to build
+  a toy project as a part of this presentation, maybe a project health report tool, or
+  something that has to do with keeping documentation up to date (given my role at the
+  CNCF)
+
+  The way I want to work with you is collaboratively. I need to understand this well enough
+  to explain it. Each step I should be consulted, or have something explained. Provide 
+  links to context. We're writing this together, but I have to present it and be able to
+  answer detailed questions from a very technical audience.
+
+  Please work in the KCCN-EU-Maintainer-Summit-2026 folder. Let's create a presentation
+  folder under it, and any projects folders we need for the demo will go there too.
