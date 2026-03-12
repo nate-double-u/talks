@@ -621,6 +621,7 @@ Speaker notes:
 - Custom instructions: [docs.github.com/en/copilot/tutorials/use-custom-instructions](https://docs.github.com/en/copilot/tutorials/use-custom-instructions) <sup>[5]</sup>
 - Writing great AGENTS.md: [github.blog/.../how-to-write-a-great-agents-md...](https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-lessons-from-over-2500-repositories/) <sup>[6]</sup>
 - Agent mode vs. coding agent: [github.blog/.../less-todo-more-done...](https://github.blog/developer-skills/github/less-todo-more-done-the-difference-between-coding-agent-and-agent-mode-in-github-copilot/) <sup>[4]</sup>
+- Agentic workflows auth setup: [github.github.io/gh-aw/reference/auth/](https://github.github.io/gh-aw/reference/auth/)
 
 <!--
 Speaker notes:
