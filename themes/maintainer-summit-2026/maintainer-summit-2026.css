@@ -1,0 +1,140 @@
+/* @theme maintainer-summit-2026 */
+/* SPDX-License-Identifier: Apache-2.0 */
+
+/*
+ * KubeCon + CloudNativeCon Europe 2026 — Maintainer Summit
+ * Event-specific Marp theme based on the CNCF base theme.
+ *
+ * Brand palette derived from the official PPTX template:
+ *   Navy:        #262267
+ *   Blue:        #305BA9
+ *   Orange:      #FF7F15
+ *   Yellow:      #FFC217
+ *   Light blue:  #B0DDFF
+ *   Light orange: #FFA35F
+ */
+
+@import 'cncf';
+
+/* --- Override Color Palette --- */
+
+:root {
+  --ms-navy: #262267;
+  --ms-blue: #305BA9;
+  --ms-orange: #FF7F15;
+  --ms-yellow: #FFC217;
+  --ms-light-blue: #B0DDFF;
+  --ms-light-orange: #FFA35F;
+}
+
+/* --- Base Slide Overrides ---
+ * Background images from the PPTX template are applied per-slide
+ * via ![bg]() in the markdown. CSS handles text colors and positioning.
+ */
+
+section {
+  border-top: none;
+}
+
+/* --- Typography Overrides --- */
+
+h1 {
+  color: var(--ms-navy);
+}
+
+h2 {
+  color: var(--ms-blue);
+}
+
+h3 {
+  color: var(--ms-navy);
+  opacity: 0.7;
+}
+
+/* --- Links --- */
+
+a {
+  color: var(--ms-blue);
+}
+
+/* --- Code --- */
+
+pre code {
+  border-left: 4px solid var(--ms-orange);
+}
+
+/* --- Tables --- */
+
+th {
+  background-color: var(--ms-navy);
+}
+
+/* --- Blockquotes --- */
+
+blockquote {
+  border-left: 4px solid var(--ms-orange);
+  background-color: #fff8f0;
+}
+
+/* --- Title Slide --- */
+
+section.title {
+  color: white;
+  padding-left: 290px;
+  justify-content: flex-start;
+  padding-top: 100px;
+}
+
+section.title h1 {
+  color: white;
+}
+
+section.title h2 {
+  color: var(--ms-light-blue);
+}
+
+section.title strong {
+  color: white;
+}
+
+section.title small {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* --- Lead Slides (section dividers, closing) --- */
+
+section.lead {
+  color: var(--ms-navy);
+}
+
+section.lead h1 {
+  color: var(--ms-navy);
+}
+
+section.lead h2 {
+  color: var(--ms-light-blue);
+}
+
+section.lead a {
+  color: var(--ms-light-blue);
+}
+
+section.lead strong {
+  color: var(--ms-orange);
+}
+
+/* --- Page Number & Footer (both right-aligned) --- */
+
+section::after {
+  left: auto;
+  right: 64px;
+  color: #999;
+  font-size: 13px;
+}
+
+footer {
+  justify-content: flex-end;
+  padding-right: 100px;
+  color: #999;
+  font-size: 13px;
+}
