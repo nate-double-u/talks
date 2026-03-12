@@ -1,8 +1,8 @@
 ---
 marp: true
-theme: cncf
+theme: maintainer-summit-2026
 paginate: true
-footer: '<span class="footer-license">| CC BY 4.0 — Cloud Native Computing Foundation</span><img class="footer-logo" src="images/cncf-icon-black.svg" alt="CNCF">'
+footer: 'CC BY 4.0 — Cloud Native Computing Foundation |'
 title: "Agentic AI for Maintainers: Getting the Most from GitHub Copilot Enterprise"
 author: Nate Waddington
 ---
@@ -12,7 +12,7 @@ author: Nate Waddington
 <!-- _paginate: false -->
 <!-- SLIDE 1 — Act 1: Why This Matters -->
 
-![w:300](images/cncf-color.svg)
+![bg](images/bg-title.png)
 
 # Agentic AI for Maintainers
 
@@ -35,6 +35,8 @@ Speaker notes:
 ---
 
 <!-- SLIDE 2 -->
+
+![bg](images/bg-content.png)
 
 # The CNCF + GitHub Partnership
 
@@ -62,6 +64,8 @@ Speaker notes:
 ---
 
 <!-- SLIDE 3 -->
+
+![bg](images/bg-content.png)
 
 # Augmentation, Not Automation
 
@@ -92,6 +96,8 @@ Speaker notes:
 
 <!-- SLIDE 4 — Act 2: The Toolkit -->
 
+![bg](images/bg-content.png)
+
 # The Agentic Spectrum
 
 | | Completions | Chat | Agent Mode | Coding Agent | Agentic Workflows |
@@ -120,6 +126,8 @@ Speaker notes:
 <!-- SLIDE 5 -->
 
 
+![bg](images/bg-content.png)
+
 # Agent Mode: Your Pair Programmer
 
 **Synchronous, in your editor.** You give it a goal in natural language; it plans, edits files, runs commands, reads failures, fixes them, and loops — while you watch and steer.
@@ -143,6 +151,8 @@ Speaker notes:
 
 <!-- SLIDE 6 -->
 
+![bg](images/bg-content.png)
+
 # Agent Mode: Tips for Better Results
 
 - **Be specific:** "Add a health check endpoint to the API server" beats "help with the API"
@@ -158,6 +168,8 @@ Speaker notes:
 ---
 
 <!-- SLIDE 7 -->
+
+![bg](images/bg-content.png)
 
 # Coding Agent: Your Async Teammate
 
@@ -184,6 +196,8 @@ Speaker notes:
 
 <!-- SLIDE 8 -->
 
+![bg](images/bg-content.png)
+
 # Coding Agent: What Works
 ## (and What Doesn't)
 
@@ -209,6 +223,8 @@ Speaker notes:
 
 <!-- SLIDE 9 -->
 
+![bg](images/bg-content.png)
+
 # Agentic Workflows: Continuous AI
 
 **Automated, in GitHub Actions.** Define maintenance tasks in Markdown. Coding agents execute them on a schedule — daily, on events, or on demand. <sup>[10]</sup>
@@ -233,6 +249,8 @@ Speaker notes:
 
 <!-- SLIDE 10 -->
 
+![bg](images/bg-content.png)
+
 # Agentic Workflows: Maintainer Use Cases
 
 - **Continuous triage** — label, summarize, and route new issues
@@ -254,6 +272,8 @@ Speaker notes:
 ---
 
 <!-- SLIDE 11 -->
+
+![bg](images/bg-content.png)
 
 # When to Use Which
 
@@ -284,6 +304,8 @@ Speaker notes:
 
 <!-- SLIDE 12 -->
 
+![bg](images/bg-content.png)
+
 # Teaching Copilot Your Project
 
 Two files that change everything:
@@ -313,6 +335,8 @@ Speaker notes:
 
 <!-- SLIDE 13 -->
 
+![bg](images/bg-content.png)
+
 # Teaching Copilot Your Project
 
 ### `AGENTS.md` — What the coding agent can and can't do
@@ -335,6 +359,8 @@ Speaker notes:
 
 <!-- SLIDE 14 -->
 
+![bg](images/bg-content.png)
+
 # Custom Agents
 
 ### Specialist personas for your project
@@ -356,6 +382,8 @@ Speaker notes:
 ---
 
 <!-- SLIDE 15 -->
+
+![bg](images/bg-content.png)
 
 # Cross-Repo Workflows with MCP
 
@@ -384,6 +412,8 @@ Speaker notes:
 ---
 
 <!-- SLIDE 16 (cut candidate) -->
+
+![bg](images/bg-content.png)
 
 # The Broader Ecosystem: AAIF
 
@@ -416,6 +446,8 @@ Speaker notes:
 
 <!-- SLIDE 17 -->
 
+![bg](images/bg-content.png)
+
 # Security Is Built In
 ## (But You Still Review)
 
@@ -443,6 +475,8 @@ Speaker notes:
 
 <!-- SLIDE 18 -->
 
+![bg](images/bg-content.png)
+
 # Security Is Built In
 ## What You Should Know
 
@@ -465,6 +499,8 @@ Speaker notes:
 ---
 
 <!-- SLIDE 19 -->
+
+![bg](images/bg-content.png)
 
 # Real-World: KubeStellar's Agentic Experiment
 
@@ -505,6 +541,8 @@ Speaker notes:
 
 <!-- SLIDE 20 -->
 
+![bg](images/bg-content.png)
+
 # The Pattern That Works
 
 ### Detection → Auto-Fix → Human Review → Loop
@@ -538,6 +576,8 @@ Speaker notes:
 
 <!-- SLIDE 21 — Act 3: Your Next Move -->
 
+![bg](images/bg-content.png)
+
 # Your Next Monday Back
 
 Three things you can do when you're back at your desk:
@@ -569,6 +609,8 @@ Speaker notes:
 
 <!-- SLIDE 22 -->
 
+![bg](images/bg-content.png)
+
 # Resources
 
 ### CNCF + GitHub Partnership
@@ -592,6 +634,10 @@ Speaker notes:
 
 <!-- SLIDE 23 -->
 <!-- _class: lead -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
+
+![bg](images/bg-closing.png)
 
 # Questions?
 
@@ -611,6 +657,8 @@ Speaker notes:
 <!-- SLIDE 24 (References 1/4) -->
 <!-- _class: references -->
 
+![bg](images/bg-content.png)
+
 # References
 
 **[1]** Brynjolfsson, E., Chandar, B., & Chen, R. "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence." Stanford Digital Economy Lab, November 2025.
@@ -626,6 +674,8 @@ https://github.blog/changelog/2025-10-28-copilot-coding-agent-now-automatically-
 
 <!-- SLIDE 25 (References 2/4) -->
 <!-- _class: references -->
+
+![bg](images/bg-content.png)
 
 # References (continued)
 
@@ -643,6 +693,8 @@ https://github.blog/ai-and-ml/github-copilot/how-to-write-a-great-agents-md-less
 <!-- SLIDE 26 (References 3/4) -->
 <!-- _class: references -->
 
+![bg](images/bg-content.png)
+
 # References (continued)
 
 **[7]** "Creating Custom Agents for Copilot Coding Agent." GitHub Docs.
@@ -658,6 +710,8 @@ https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-o
 
 <!-- SLIDE 27 (References 4/4) -->
 <!-- _class: references -->
+
+![bg](images/bg-content.png)
 
 # References (continued)
 
