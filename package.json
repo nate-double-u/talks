@@ -8,7 +8,7 @@
     "build:talks": "npm run build:kccn-eu-2026-agentic-ai",
     "build:kccn-eu-2026-agentic-ai": "mkdir -p dist/kccn-eu-2026 && marp KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/slides.md --html --theme-set themes/cncf/cncf.css themes/maintainer-summit-2026/maintainer-summit-2026.css -o dist/kccn-eu-2026/index.html && cp -r themes/maintainer-summit-2026/images dist/kccn-eu-2026/images",
     "preview": "npm run preview:kccn-eu-2026-agentic-ai",
-    "preview:kccn-eu-2026-agentic-ai": "marp KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/slides.md --html --theme-set themes/cncf/cncf.css themes/maintainer-summit-2026/maintainer-summit-2026.css --preview"
+    "preview:kccn-eu-2026-agentic-ai": "mkdir -p KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/images && cp -r themes/maintainer-summit-2026/images/* KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/images && marp KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/slides.md --html --theme-set themes/cncf/cncf.css themes/maintainer-summit-2026/maintainer-summit-2026.css --preview"
   },
   "author": "Nate Waddington",
   "license": "Apache-2.0 AND CC-BY-4.0",
