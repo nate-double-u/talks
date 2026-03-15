@@ -10,7 +10,21 @@ author: Nate Waddington
 <!-- _class: title -->
 <!-- _footer: "" -->
 <!-- _paginate: false -->
-<!-- SLIDE 1 — Act 1: Why This Matters -->
+<!-- SLIDE 1 — Act 1: Why This Matters
+=== DW ===
+Consider cueing the listeners to help organize the talk -- Explicitly put
+"Part 1: Why This Matters" on each of the Act 1 slides (and similarly for
+Acts 2 and 3).
+
+In general, I think it's a solid talk. Given that your audience is maintainers, the
+best way I can see to keep the talk shorter is to omit or abbreviate tangential
+technical details, and just be prepared to discuss them if they come up. If you're
+giving out the slides (or not the slides but a handout) after the preso, include
+notes about those things along with the references. Prioritize the main points.
+They'll be curious (they're programmers) but they don't need to know everything today!
+=== /DW ==
+
+-->
 
 ![bg](images/bg-title.png)
 
@@ -52,11 +66,23 @@ CNCF has partnered with GitHub to provide **Copilot Enterprise** to project main
 
 Apply at **[servicedesk.cncf.io](https://servicedesk.cncf.io)** → Program Management
 
-<!--
+<!-- 
+=== DW ===
+I find it difficult to keep track of my place in preso speaker notes, so I try to
+foolproof them to the extent possible.
+I'd split your speaker notes into:
+- Points you want to talk about, and
+- Supporting info / optional / rebuttal material
+YMMV, you've done a lot more of this than I have. Maybe you can navigate speaker notes easily.
+But, important point since it's a concern:
+This will also help shorten your talk; you'll know what you can skip.
+=== /DW ==
+
 Speaker notes:
-- Quick context: this exists, it's free for maintainers, here's what's in it
-- Don't linger — the audience wants to know HOW to use it, not WHAT it is
-- Mention eligibility: verified against maintainers.cncf.io
+Don't linger — the audience wants to know HOW to use it, not WHAT it is
+1. Quick context: this exists, it's free for maintainers, here's what's in it
+2. Mention eligibility: verified against maintainers.cncf.io
+---
 - Blog announcement: [12] contribute.cncf.io
 - If they haven't applied yet, the link is on the references slide at the end
 -->
@@ -82,9 +108,13 @@ Speaker notes:
 
 <!--
 Speaker notes:
-- This is the through-line for the entire talk
-- Every tool I'm about to show you keeps the human in the loop
-- The KubeStellar experiment proved this: 52% of Copilot PRs needed human intervention — and that's the POINT
+1. This is the through-line for the entire talk
+2. Every tool I'm about to show you keeps the human in the loop
+3. The KubeStellar experiment proved this: 52% of Copilot PRs needed human intervention — and that's the POINT
+=== DW ===
+What KubeStellar experiment? You haven't introduced it yet.
+=== /DW ==
+---
 - Source: Brynjolfsson, Chandar & Chen, "Canaries in the Coal Mine?" (Nov 2025), pp. 11, 16
   https://digitaleconomy.stanford.edu/app/uploads/2025/11/CanariesintheCoalMine_Nov25.pdf
 - The 16% figure is from p.16 (Fact 4): "most AI-exposed occupations" after firm-time controls
@@ -95,6 +125,9 @@ Speaker notes:
 ---
 
 <!-- SLIDE 4 — Act 2: The Toolkit -->
+=== DW ===
+Act 1 is short! More of a prelude, really.
+=== /DW ==
 
 ![bg](images/bg-content.png)
 
@@ -109,15 +142,23 @@ Speaker notes:
 
 Today we're focusing on the right side: **agent mode**, the **coding agent**, and **agentic workflows**.
 
+=== DW ===
+- Good slide, good table. Very clear progression less -> more autonomy.
+- Nit: "You drive" (and later in preso "You steer"; maybe others): avoid vague metaphor. "You ask, it answers" is much better.
+- I suspect your audience is more familiar with Agent Mode that you're giving them credit for. Might be able to shave some time
+  by touching on this more lightly in the next couple slides.
+=== /DW ==
+
 <!--
 Speaker notes:
 - This is a quick visual overview — don't spend more than 90 seconds here
-- The progression left to right is: increasing autonomy, decreasing real-time oversight
-- Most maintainers are already using completions and chat
-- New column: Agentic Workflows (technical preview, Feb 2026) — the "Continuous AI" layer
-- Think of it as CI/CD for AI-assisted maintenance: triage, docs sync, test improvement
-- Authored in Markdown, executed by coding agents in GitHub Actions
-- Read-only by default with safe outputs — strong guardrails by design
+1. The progression left to right is: increasing autonomy, decreasing real-time oversight
+2. Most maintainers are already using completions and chat (and maybe Agent Mode in Cursor or the equivalent?)
+3. New column: Agentic Workflows (technical preview, Feb 2026) — the "Continuous AI" layer
+   - Think of it as CI/CD for AI-assisted maintenance: triage, docs sync, test improvement
+   - Authored in Markdown, executed by coding agents in GitHub Actions
+   - Read-only by default with safe outputs — strong guardrails by design
+---
 - Sets up the next three slides
 -->
 
@@ -131,20 +172,24 @@ Speaker notes:
 # Agent Mode: Your Pair Programmer
 
 **Synchronous, in your editor.** You give it a goal in natural language; it plans, edits files, runs commands, reads failures, fixes them, and loops — while you watch and steer.
+=== DW ===
+Again, "steer" is vague. "While you direct, edit, and approve"?
+Some kind of visual cue would be helpful tying the phrase "Agent Mode" to the third column of the table. Maybe use color? Similarly for Coding Agent and Agentic Workflows.
+=== /DW ==
 
 ### When to reach for agent mode:
 
 - Exploring an unfamiliar codebase
-- Prototyping a feature or fix interactively
+- Prototyping a feature or fixing interactively
 - Debugging — let it read errors and iterate
 - Refactoring with immediate feedback
 
 <!--
 Speaker notes:
-- This is the "senior dev pair programming with you" metaphor
 - SHOW a screenshot or short recording here: agent mode tackling a real task
-- Key point: you're in the loop the whole time — this is augmentation
-- Agent mode supports multiple models — mention the model picker briefly
+1. This is the "senior dev pair programming with you" metaphor
+2. Key point: you're in the loop the whole time — this is augmentation
+3. Agent mode supports multiple models — mention the model picker briefly
 -->
 
 ---
@@ -161,6 +206,7 @@ Speaker notes:
 
 <!--
 Speaker notes:
+---
 - MCP = Model Context Protocol, an open standard for connecting AI to external tools
 - [2] = GitHub blog on MCP, add to references
 -->
@@ -209,14 +255,22 @@ Speaker notes:
 - Bug fixes in well-tested repos
 
 ### Not yet ideal for:
+=== DW ===
+"Not yet ideal" sounds too coy to me. "Less helpful for"? "Not yet ready for"?
+=== /DW ==
 
 - Massive rewrites or architectural changes
 - Repos with zero test coverage
 
 <!--
 Speaker notes:
-- The coding agent can also see images in issues (screenshots, mockups) via vision models
 - Stress: pick something small and well-tested for the first try
+---
+- The coding agent can also see images in issues (screenshots, mockups) via vision models
+=== DW ===
+Omit this point for time? Is it important?
+=== /DW ==
+
 -->
 
 ---
@@ -227,14 +281,15 @@ Speaker notes:
 
 # Agentic Workflows: Continuous AI
 
-**Automated, in GitHub Actions.** Define maintenance tasks in Markdown. Coding agents execute them on a schedule — daily, on events, or on demand. <sup>[10]</sup>
+**Automated, in-GitHub Actions.** Define maintenance tasks in Markdown. Coding agents execute them on a schedule — daily, on events, or on demand. <sup>[10]</sup>
 
 ### What it looks like:
 
 1. Author a workflow in `.github/workflows/my-workflow.md`
 2. Describe the goal in plain language (not YAML)
 3. It runs via GitHub Actions using a coding agent
-4. Results appear as comments, labels, issues, or PRs — you review
+4. Results appear as comments, labels, issues, or PRs 
+5. You review
 
 <!--
 Speaker notes:
@@ -261,12 +316,18 @@ Speaker notes:
 
 <!--
 Speaker notes:
-- Don Syme's Repo Assist is a concrete example: cleared years of backlog
+1 Don Syme's Repo Assist is a concrete example: cleared years of backlog
   across 4 F# repos in a weekend using this
-- Repo Memory: the workflow remembers where it left off between runs,
+2 Repo Memory: the workflow remembers where it left off between runs,
   so it works systematically through your backlog
-- Cost: each run typically uses 2 premium requests with Copilot defaults
-- [11] = Don Syme's blog post on Repo Assist
+3 Cost: each run typically uses 2 premium requests with Copilot defaults
+4 [11] = Don Syme's blog post on Repo Assist
+=== DW ===
+Point 2: Interesting, but not vital; cut for time
+Point 3: No context here. Is that a lot? What is a premium request and how many do I have?
+  Also not a vital point.
+=== /DW ==
+
 -->
 
 ---
@@ -283,6 +344,10 @@ Speaker notes:
 | **Your role** | Steering in real time | Reviewing a PR later | Overseeing a continuous process |
 | **Best when...** | You need tight feedback loops | The task is well-scoped with tests | The work is repetitive and recurring |
 | **Think of it as...** | Pair programming | Delegating a ticket | Hiring a night shift |
+=== DW ===
+I like this table too, especially "Think of it as ..."
+But, "Best when" is weak, IMO. Replace with "What it's for" from Key takeaways below?
+=== /DW ==
 
 ### The combined workflow:
 
@@ -313,6 +378,10 @@ Two files that change everything:
 1. `.github/copilot-instructions.md`
 2. `AGENTS.md`
 
+=== DW ===
+You try to put too much on some of these slides. This is one of them. Separate it here.
+More slides is not necessarily a longer preso. "Two files" by itself will take 5 sec.
+=== /DW ==
 ### `.github/copilot-instructions.md` — Your project's house rules
 
 Copilot reads this on every interaction. Put your conventions here:
@@ -347,6 +416,9 @@ Defines the agent's persona, available commands, and boundaries:
 - Behavioral constraints: "never commit secrets"
 
 Both live in your repo, versioned alongside your code. <sup>[5]</sup> <sup>[6]</sup>
+=== DW ===
+Re "Both": copilot-instructions.md isn't mentioned on this slide.
+=== /DW ==
 
 <!--
 Speaker notes:
@@ -369,6 +441,11 @@ Define them in `.github/agents/*.agent.md` — you create whatever specialists y
 - A **docs agent** that only touches documentation files
 - A **test agent** that writes and maintains test suites
 - A **triage agent** that labels and categorizes issues
+=== DW ===
+Is agents/*.agent.md an alternative to AGENTS.md? If so, can you combine the slides and mention them once to save time?
+And if not -- really? They gave the same name to two different config files?
+Where does AGENTS.md live, anyway?
+=== /DW ==
 
 Each has its own persona, commands, and file boundaries. <sup>[7]</sup>
 
@@ -377,6 +454,11 @@ Speaker notes:
 - Custom agents are powerful for large projects with distinct areas of concern
 - Example: KubeStellar used label-driven routing to direct work — custom agents formalize this
 - [7] = GitHub docs on creating custom agents
+=== DW ===
+You still haven't introduced KubeStellar. You're going to spend more time than you want explaining it if you
+give it as an example before you introduce it.
+=== /DW ==
+
 -->
 
 ---
@@ -386,6 +468,11 @@ Speaker notes:
 ![bg](images/bg-content.png)
 
 # Cross-Repo Workflows with MCP
+=== DW ===
+Maybe a one-sentence description of what MCP is here, then say "It's used in Agent Mode
+  only to provide visibility into other repos and resources"
+I feel like this could be a very brief slide -- something you want to mention but not belabor.
+=== /DW ==
 
 The Model Context Protocol gives agent mode *research access* across your organization:
 - Search issues, PRs, and code in other repos you have access to
@@ -412,6 +499,10 @@ Speaker notes:
 ---
 
 <!-- SLIDE 16 (cut candidate) -->
+=== DW ===
+Maybe move this slide to the end and present it if there's time? It definitely
+interrupts the flow here.
+=== /DW ==
 
 ![bg](images/bg-content.png)
 
@@ -430,6 +521,9 @@ MCP and AGENTS.md aren't GitHub-only concepts — they're **open standards** gov
 <!--
 Speaker notes:
 - This slide positions the talk as "not a GitHub sales pitch" — the standards are open
+=== DW ===
+Gotta say, if that's the case then "copilot-instructions.md" is an unfortunate name for the control file.
+=== /DW ==
 - AAIF is to agentic AI what CNCF is to cloud infrastructure
 - Goose is interesting but out of scope for today — it's a local agent runtime,
   model-agnostic (works with any LLM), Apache 2.0 licensed
@@ -449,7 +543,6 @@ Speaker notes:
 ![bg](images/bg-content.png)
 
 # Security Is Built In
-## (But You Still Review)
 
 ### What runs automatically on every coding agent PR:
 
@@ -459,6 +552,8 @@ Speaker notes:
 - **Automated code review** for quality issues
 
 The agent attempts to fix issues before submitting the PR. <sup>[3]</sup>
+
+**You still review PRs.**
 
 <!--
 Speaker notes:
@@ -488,11 +583,12 @@ Speaker notes:
 Speaker notes:
 - IP considerations: Microsoft provides indemnification for unmodified Copilot suggestions,
   but maintainers should still review for license compatibility
-- Invisible character attacks are a known research concern — compromised upstream code
-  could influence suggestions. Good reason to review carefully.
 - LF AI guidance core principles: AI contributions accepted, but contributors must ensure
   no licensing conflicts and must attribute third-party materials. This is the FLOOR —
   projects can tighten (e.g., "no AI-generated code without review") but can't be looser.
+  ---
+- Invisible character attacks are a known research concern — compromised upstream code
+  could influence suggestions. Good reason to review carefully.
 - [8] = LF generative AI policy
 -->
 
@@ -575,6 +671,9 @@ Speaker notes:
 ---
 
 <!-- SLIDE 21 — Act 3: Your Next Move -->
+=== DW ===
+Act 3 is very short as well. :D
+=== /DW ==
 
 ![bg](images/bg-content.png)
 
