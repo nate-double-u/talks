@@ -23,7 +23,7 @@ Head of Mentorship & Documentation, CNCF
 
 Maintainer Summit — KubeCon + CloudNativeCon Europe 2026
 
-<small>March 22, 2026 · DRAFT</small>
+<small>March 22, 2026</small>
 
 <!--
 Speaker notes:
@@ -573,6 +573,29 @@ Speaker notes:
 ---
 
 <!-- SLIDE 21 -->
+<!-- _class: lead -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
+
+![bg](images/bg-closing.png)
+
+# Questions?
+
+<!--
+Speaker notes:
+1. Open for Q&A — aim for ~5 minutes
+---
+- Likely questions to prep for:
+  - "How does this work with CLAs/DCOs?" (see your Slide 12 notes)
+  - "What about CodeQL?" (see your Slide 11 notes)
+  - "Can I use this with [other AI tool]?" — MCP is an open standard, AGENTS.md is too
+  - "What models does it use?" — model picker lets you choose; Auto mode recommended
+  - "Is my code used for training?" — No, Enterprise code is not used for training
+-->
+
+---
+
+<!-- SLIDE 22 -->
 
 ![bg](images/bg-content.png)
 
@@ -593,7 +616,7 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 22 -->
+<!-- SLIDE 23 -->
 
 ![bg](images/bg-content.png)
 
@@ -607,11 +630,13 @@ Speaker notes:
 
 ---
 
-<!-- SLIDE 23 -->
+<!-- SLIDE 24 -->
 
 ![bg](images/bg-content.png)
 
-# The Broader Ecosystem: AAIF
+# Resources (continued)
+
+## The Broader Ecosystem: AAIF
 
 In December 2025, the Linux Foundation created the **Agentic AI Foundation (AAIF)** — a sibling foundation to the CNCF.
 
@@ -636,29 +661,6 @@ Speaker notes:
 - AAIF had 146 member organizations by Feb 2026 — growing fast
 - David Nalley (AWS, former CNCF experience) chairs the governing board
 - [9] = LF press release on AAIF formation
--->
-
----
-
-<!-- SLIDE 24 -->
-<!-- _class: lead -->
-<!-- _footer: "" -->
-<!-- _paginate: false -->
-
-![bg](images/bg-closing.png)
-
-# Questions?
-
-<!--
-Speaker notes:
-1. Open for Q&A — aim for ~5 minutes
----
-- Likely questions to prep for:
-  - "How does this work with CLAs/DCOs?" (see your Slide 12 notes)
-  - "What about CodeQL?" (see your Slide 11 notes)
-  - "Can I use this with [other AI tool]?" — MCP is an open standard, AGENTS.md is too
-  - "What models does it use?" — model picker lets you choose; Auto mode recommended
-  - "Is my code used for training?" — No, Enterprise code is not used for training
 -->
 
 ---
@@ -732,3 +734,20 @@ https://dsyme.net/2026/02/25/repo-assist-a-repository-assistant/
 
 **[12]** "GitHub Copilot Enterprise for CNCF Maintainers." CNCF Contributor Blog, December 2025.
 https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers
+
+---
+
+<!-- SLIDE 29 (Colophon) -->
+<!-- _class: references -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
+
+![bg](images/bg-content.png)
+
+# Colophon
+
+This presentation was built with [Marp](https://marp.app/) and is available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+**Source:** [github.com/nate-double-u/talks](https://github.com/nate-double-u/talks)
+**Path:** `KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/slides.md`
+**Theme:** Maintainer Summit 2026 (based on [KubeConEU26-Maintainer-Summit_ppt.pptx](https://events.linuxfoundation.org/wp-content/uploads/2026/01/KubeConEU26-Maintainer-Summit_ppt.pptx))
