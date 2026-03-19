@@ -23,7 +23,7 @@ author: Nate Waddington
 
 Maintainer Summit — KubeCon + CloudNativeCon Europe 2026
 
-<small>March 22, 2026 · DRAFT</small>
+<small>March 22, 2026</small>
 
 ---
 
@@ -33,15 +33,19 @@ Maintainer Summit — KubeCon + CloudNativeCon Europe 2026
 
 ![bg](images/bg-section-windmill.png)
 
-# Topic 1
-
-<!-- Replace with first discussion topic -->
+# Building & Organizing a Docs Team
 
 ---
 
 ![bg](images/bg-content.png)
 
-<!-- Add content for Topic 1 -->
+## Building & Organizing a Docs Team
+
+- How do you build a docs team within an open source project?
+- What org models work? Centralized docs team vs. distributed ownership?
+- How do mentorship programs help grow docs contributors?
+  - OTel–Prometheus docs mentorship
+  - Kubernetes Korean localization LFX mentorship & AI-tooling work
 
 ---
 
@@ -51,15 +55,17 @@ Maintainer Summit — KubeCon + CloudNativeCon Europe 2026
 
 ![bg](images/bg-section-helm.png)
 
-# Topic 2
-
-<!-- Replace with second discussion topic -->
+# Contributor On-Ramps
 
 ---
 
 ![bg](images/bg-content.png)
 
-<!-- Add content for Topic 2 -->
+## Contributor On-Ramps
+
+- What does a genuinely low-friction first docs contribution look like?
+- Do you create and curate good first issues for new contributors?
+- How do you move someone from "first PR" to "trusted reviewer"?
 
 ---
 
@@ -69,15 +75,18 @@ Maintainer Summit — KubeCon + CloudNativeCon Europe 2026
 
 ![bg](images/bg-section-windmill.png)
 
-# Topic 3
-
-<!-- Replace with third discussion topic -->
+# Docs Ownership & Drift
 
 ---
 
 ![bg](images/bg-content.png)
 
-<!-- Add content for Topic 3 -->
+## Docs Ownership & Drift
+
+- Who owns fixing incorrect docs — feature maintainers or the docs team?
+- Can you prevent drift? Is it process, automation, or both?
+  - Docs-as-code automation, CI checks, linting
+  - OTel Collector docs refactoring as a case study
 
 ---
 
@@ -87,15 +96,18 @@ Maintainer Summit — KubeCon + CloudNativeCon Europe 2026
 
 ![bg](images/bg-section-helm.png)
 
-# Topic 4
-
-<!-- Replace with fourth discussion topic -->
+# Localization
 
 ---
 
 ![bg](images/bg-content.png)
 
-<!-- Add content for Topic 4 -->
+## Localization
+
+- Who's in charge of localization? How is it organized?
+- What guardrails are in place for quality and consistency?
+- How do you signal freshness or staleness of translated content?
+- Kubernetes SIG Docs localization subproject as a model
 
 ---
 
@@ -105,15 +117,20 @@ Maintainer Summit — KubeCon + CloudNativeCon Europe 2026
 
 ![bg](images/bg-section-windmill.png)
 
-# Topic 5
-
-<!-- Replace with fifth discussion topic -->
+# Docs in the Age of AI
 
 ---
 
 ![bg](images/bg-content.png)
 
-<!-- Add content for Topic 5 -->
+## Docs in the Age of AI
+
+- AI tools increasingly answer questions directly — how is this
+  changing engagement patterns around tech docs?
+- If docs traffic declines, what are docs *for*?
+  - Discovery, learning, AI consumption, community, or a combination?
+- How should this affect our tech docs strategy going forward?
+- How do you ask for and incorporate feedback about docs?
 
 ---
 
