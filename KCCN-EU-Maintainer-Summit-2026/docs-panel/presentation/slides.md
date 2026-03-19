@@ -86,7 +86,7 @@ Maintainer Summit — KubeCon + CloudNativeCon Europe 2026
 - Who owns fixing incorrect docs — feature maintainers or the docs team?
 - Can you prevent drift? Is it process, automation, or both?
   - Docs-as-code automation, CI checks, linting
-  - OTel Collector docs refactoring as a case study
+- OTel Collector docs refactoring as a case study
 
 ---
 
