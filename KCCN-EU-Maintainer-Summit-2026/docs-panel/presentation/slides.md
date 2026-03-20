@@ -142,3 +142,19 @@ Maintainer Summit — KubeCon + CloudNativeCon Europe 2026
 
 # Questions?
 
+---
+
+<!-- _class: references -->
+<!-- _footer: "" -->
+<!-- _paginate: false -->
+
+![bg](images/bg-content.png)
+
+# Colophon
+
+This presentation was built with [Marp](https://marp.app/) and is available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+**Source:** [github.com/nate-double-u/talks](https://github.com/nate-double-u/talks)
+**Path:** `KCCN-EU-Maintainer-Summit-2026/docs-panel/presentation/slides.md`
+**Theme:** Maintainer Summit 2026 (based on [KubeConEU26-Maintainer-Summit_ppt.pptx](https://events.linuxfoundation.org/wp-content/uploads/2026/01/KubeConEU26-Maintainer-Summit_ppt.pptx))
+
