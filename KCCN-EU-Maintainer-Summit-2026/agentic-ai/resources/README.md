@@ -2,7 +2,7 @@
 
 > This talk will be presented at the Maintainer Summit, KubeCon + CloudNativeCon Europe 2026.
 >
-> [Download PDF](https://github.com/nate-double-u/talks/releases/download/kccn-eu-2026-agentic-ai-v1.2/agentic-ai-for-maintainers.pdf)
+> [Download PDF](https://github.com/nate-double-u/talks/releases/download/kccn-eu-2026-agentic-ai-v2/agentic-ai-for-maintainers.pdf)
 
 External papers and presentations referenced while developing this talk.
 These are linked rather than bundled, as they have their own copyright and licensing.
