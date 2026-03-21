@@ -454,12 +454,12 @@ Speaker notes:
 
 A CNCF sandbox project put these tools to the test with Andy Anderson and Ashley Wolf — all initial code and every PR were authored by coding agents:
 
-| Metric │ Result │
-| --- │ --- │
-│ Total PRs            │ 2,217 opened, 1,907 merged in 9 weeks           │
-│ Issues auto-detected │ 75% in first 5 weeks (348 auto-qa issues total) │
-│ Copilot PRs merged   │ 197 — 51% acceptance rate                       │
-│ GitHub Actions runs  │ 144,126                                         │
+| Metric | Result |
+| --- | --- |
+| Total PRs | 2,217 opened, 1,907 merged in 9 weeks |
+| Issues auto-detected | 75% in first 5 weeks (348 auto-qa issues total) |
+| Copilot PRs merged | 197 — 51% acceptance rate |
+| GitHub Actions runs | 144,126 |
 
 51% fully automated + 49% augmented = 100% useful, not 51% success / 49% waste. Half the work was merged untouched; the other half gave reviewers a head start instead of a blank page.
 
