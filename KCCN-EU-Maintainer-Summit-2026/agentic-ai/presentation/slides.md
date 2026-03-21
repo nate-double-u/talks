@@ -241,8 +241,7 @@ Speaker notes:
 <!--
 Speaker notes:
 1. "Continuous AI" — GitHub Next's framing, parallel to CI/CD
-2. Guardrails: read-only by default, safe outputs constrain what the agent can do
-   (specific labels only, title-prefixed PRs only, never merges)
+2. Guardrails: read-only by default, safe outputs constrain what the agent can do (specific labels only, title-prefixed PRs only, never merges)
 ---
 - [10] = GitHub blog on agentic workflows
 -->
@@ -263,8 +262,7 @@ Speaker notes:
 
 <!--
 Speaker notes:
-1. Don Syme's Repo Assist is a concrete example: cleared years of backlog
-   across 4 F# repos in a weekend using this
+1. Don Syme's Repo Assist is a concrete example: cleared over half the technical debt across 4 F# repos in a weekend using this
 ---
 3. [11] = Don Syme's blog post on Repo Assist
 -->
@@ -291,8 +289,7 @@ Speaker notes:
 <!--
 Speaker notes:
 1. This is the "peanut butter and jelly" slide — they're meant to be used together
-2. Key takeaway: agent mode for novel work, coding agent for well-defined work,
-   agentic workflows for the recurring stuff nobody wants to do manually
+2. Key takeaway: agent mode for novel work, coding agent for well-defined work, agentic workflows for the recurring stuff nobody wants to do manually
 ---
 - Cite: [4] GitHub blog on agent mode vs coding agent
 -->
@@ -363,10 +360,8 @@ Define them in `.github/agents/*.agent.md` to create focused personas: <sup>[7]<
 
 <!--
 Speaker notes:
-1. AGENTS.md at repo root: think of it like onboarding instructions for a new contributor —
-   general rules that apply to everything
-2. Custom agents in .github/agents/ extend AGENTS.md with specialist personas —
-   they inherit the base rules but add their own scope and constraints
+1. AGENTS.md at repo root: think of it like onboarding instructions for a new contributor — general rules that apply to everything
+2. Custom agents in .github/agents/ extend AGENTS.md with specialist personas — they inherit the base rules but add their own scope and constraints
 3. All agent files live in your repo, versioned alongside your code — easy to review in PRs
 ---
 - AGENTS.md is an open standard (AAIF/LF), not GitHub-specific — same file works with other tools
@@ -393,11 +388,9 @@ Speaker notes:
    - MCP gives agent mode "eyes" into other repos (search, read, check status) via the GitHub API
    - But the actual code edits from agent mode still happen in your local workspace
    - The coding agent works within ONE repo per task — it doesn't hop between repos
-3. For the audience: "Think of MCP as giving Copilot read access across your org,
-   while the coding agent handles the writes one repo at a time"
+3. For the audience: "Think of MCP as giving Copilot read access across your org, while the coding agent handles the writes one repo at a time"
 ---
-- Cross-repo workflow in practice: use MCP in agent mode to investigate across repos,
-  then file separate issues for the coding agent in each repo
+- Cross-repo workflow in practice: use MCP in agent mode to investigate across repos, then file separate issues for the coding agent in each repo
 - Neither tool does true "edit repo A and repo B in one atomic operation"
 - MCP is configured via .vscode/mcp.json — the GitHub MCP server is first-party
 -->
@@ -427,10 +420,7 @@ Speaker notes:
 2. The security checks run without extra licensing — included in Enterprise
 ---
 - [3] = GitHub changelog on security validation
-- TODO: Review CodeQL docs to be able to explain it in detail if asked:
-  https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql
-  Key points: static analysis engine, treats code as queryable data, finds security vulns (not style),
-  free for public repos, supports Go/Python/JS/TS/Java/C++ and more.
+- TODO: Review CodeQL docs to be able to explain it in detail if asked: https://docs.github.com/en/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql — Key points: static analysis engine, treats code as queryable data, finds security vulns (not style), free for public repos, supports Go/Python/JS/TS/Java/C++ and more.
 -->
 
 ---
@@ -447,14 +437,10 @@ Speaker notes:
 
 <!--
 Speaker notes:
-1. IP considerations: Microsoft provides indemnification for unmodified Copilot suggestions,
-   but maintainers should still review for license compatibility
-2. LF AI guidance core principles: AI contributions accepted, but contributors must ensure
-   no licensing conflicts and must attribute third-party materials. This is the FLOOR —
-   projects can tighten (e.g., "no AI-generated code without review") but can't be looser.
+1. IP considerations: Microsoft provides indemnification for unmodified Copilot suggestions, but maintainers should still review for license compatibility
+2. LF policy sets licensing/attribution minimums — projects can add stricter rules, not waive those. If challenged: "The minimums around licensing and attribution aren't optional."
 ---
-- Invisible character attacks are a known research concern — compromised upstream code
-  could influence suggestions. Good reason to review carefully.
+- Invisible character attacks are a known research concern — compromised upstream code could influence suggestions. Good reason to review carefully.
 - [8] = LF generative AI policy
 -->
 
@@ -479,25 +465,13 @@ The 52% acceptance rate is the point — not a failure. Half the work was fully 
 
 <!--
 Speaker notes:
-1. SET THE SCENE: KubeStellar Console had massive contribution volume — 1,300+ PRs
-   in 6 weeks, 229 issues filed. Small maintainer team couldn't keep up manually.
-2. WALK THE NUMBERS: 952 PRs merged total. 75% of issues were auto-detected by CI
-   workflows — not humans finding them. Copilot generated 101 PRs that got merged.
-3. LAND THE PUNCHLINE: 52% acceptance rate. Tie back to Slide 3 (augmentation):
-   "That's not a failing grade. It means half the work was fully handled, and for the
-   other half, Copilot gave reviewers a starting point instead of a blank page.
-   That's augmentation."
+1. SET THE SCENE: KubeStellar Console had massive contribution volume — 1,300+ PRs in 5 weeks, 229 issues filed. Small maintainer team couldn't keep up manually.
+2. WALK THE NUMBERS: 952 PRs merged total. 75% of issues were auto-detected by CI workflows — not humans finding them. Copilot generated 101 PRs that got merged.
+3. LAND THE PUNCHLINE: 52% acceptance rate. Tie back to Slide 3 (augmentation): "That's not a failing grade. It means half the work was fully handled, and for the other half, Copilot gave reviewers a starting point instead of a blank page. That's augmentation."
 4. CREDIT: "This work was done with Andy Anderson and Ashley Wolf."
 ---
 - If time is tight, speed through the numbers and focus on the 52% takeaway
-- DCO NOTE (for your info, not on slide): DCO + AI-generated code is still actively debated.
-  The core issue: DCO requires you to certify you have the right to submit the code, but
-  U.S. Copyright Office says purely AI-generated works aren't copyrightable. So who signs?
-  Community is splitting: some require disclosure trailers (Assisted-by:), some require
-  human review/transformation, some projects (QEMU) have restricted pure AI contributions.
-  A March 2026 blog post "DCO and AI is a no-go" (brokenco.de/2026/03/02/copyright-ai.html)
-  lays out the argument directly. Red Hat also has a good writeup:
-  redhat.com/en/blog/ai-assisted-development-and-open-source-navigating-legal-issues
+- DCO NOTE (for your info, not on slide): DCO + AI-generated code is still actively debated. The core issue: DCO requires you to certify you have the right to submit the code, but U.S. Copyright Office says purely AI-generated works aren't copyrightable. So who signs? Community is splitting: some require disclosure trailers (Assisted-by:), some require human review/transformation, some projects (QEMU) have restricted pure AI contributions. A March 2026 blog post "DCO and AI is a no-go" (brokenco.de/2026/03/02/copyright-ai.html) lays out the argument directly. Red Hat also has a good writeup: redhat.com/en/blog/ai-assisted-development-and-open-source-navigating-legal-issues
 -->
 
 ---
@@ -519,18 +493,14 @@ Bug detected
           → Human reviews and merges
 ```
 
-This loop ran **67,262 times** in 5 weeks on a single CNCF project.
-
 The same pattern works at any scale — start with one workflow and grow.
 
 <!--
 Speaker notes:
 1. This is the pipeline diagram from the KubeStellar work
-2. Walk through each step briefly — the audience should see how it maps to the tools
-   you just explained (coding agent = the auto-fix, code review = CI validates)
+2. Walk through each step briefly — the audience should see how it maps to the tools you just explained (coding agent = the auto-fix, code review = CI validates)
 3. The key insight: the loop is fully automated, but a human is always the final gate
-4. Encourage the audience: "You don't need 37 workflows to start. Pick one pain point,
-   write one workflow, and let the coding agent handle the fixes."
+4. Encourage the audience: "You don't need 37 workflows to start. Pick one pain point, write one workflow, and let the coding agent handle the fixes."
 ---
 - "Goodnight agent" example: an agent that runs nightly to update documentation
 - This is the bridge to Act 3 — "here's how to start"
@@ -562,10 +532,8 @@ Pick a well-scoped issue (a docs fix, a missing test, a lint violation), assign 
 Speaker notes:
 1. Keep this punchy — these are concrete, low-risk actions
 2. Step 1 is for anyone who hasn't applied yet
-3. Step 2 is the lowest-effort, highest-value thing — even without the coding agent,
-   copilot-instructions.md improves every Copilot interaction in that repo
-4. Step 3 is where they see the magic — but stress: pick something small and well-tested
-   for the first try. Don't start with a massive refactor.
+3. Step 2 is the lowest-effort, highest-value thing — even without the coding agent, copilot-instructions.md improves every Copilot interaction in that repo
+4. Step 3 is where they see the magic — but stress: pick something small and well-tested for the first try. Don't start with a massive refactor.
 ---
 - If they already have access, they can skip to steps 2 and 3
 -->
@@ -610,8 +578,7 @@ Speaker notes:
 1. This is the "take a photo of this slide" moment
 2. All the references are also on the next slides with full citations
 ---
-- TODO: Add companion repo section back once repo is created. Include working examples
-  of copilot-instructions.md, AGENTS.md, custom agents, and MCP config — they can fork and adapt
+- TODO: Add companion repo section back once repo is created. Include working examples of copilot-instructions.md, AGENTS.md, custom agents, and MCP config — they can fork and adapt
 -->
 
 ---
@@ -644,7 +611,7 @@ In December 2025, the Linux Foundation created the **Agentic AI Foundation (AAIF
 
 - **MCP** (Model Context Protocol) — the open standard for connecting agents to external tools. Contributed by Anthropic.
 - **AGENTS.md** — the standard for agent instruction files. Contributed by OpenAI.
-- **Goose** — an open-source, local-first agent runtime. Contributed by Block.
+- **Goose** — an open-source, local-first agent framework. Contributed by Block.
 
 MCP and AGENTS.md aren't GitHub-only concepts — they're **open standards** governed by the Linux Foundation, the same umbrella as the CNCF. <sup>[9]</sup>
 
@@ -653,11 +620,8 @@ Speaker notes:
 1. This slide positions the talk as "not a GitHub sales pitch" — the standards are open
 2. AAIF is to agentic AI what CNCF is to cloud infrastructure
 ---
-- Goose is interesting but out of scope for today — it's a local agent runtime,
-  model-agnostic (works with any LLM), Apache 2.0 licensed
-- If someone asks about Goose: "It's an open-source alternative to agent mode that
-  runs on your machine with whatever model you choose. Worth exploring, but today
-  we're focused on what's included in the CNCF's Enterprise bundle."
+- Goose is interesting but out of scope for today — it's a local agent framework, model-agnostic (works with any LLM), Apache 2.0 licensed
+- If someone asks about Goose: "It's an open-source alternative to agent mode that runs on your machine with whatever model you choose. Worth exploring, but today we're focused on what's included in the CNCF's Enterprise bundle."
 - AAIF had 146 member organizations by Feb 2026 — growing fast
 - David Nalley (AWS, former CNCF experience) chairs the governing board
 - [9] = LF press release on AAIF formation
