@@ -5,12 +5,15 @@
   "description": "Presentation decks built with Marp",
   "scripts": {
     "build": "npm run build:talks && cp landing/index.html dist/index.html",
-    "build:talks": "npm run build:kccn-eu-2026-agentic-ai && npm run build:kccn-eu-2026-docs-panel",
+    "build:talks": "npm run build:kccn-eu-2026-agentic-ai && npm run build:kccn-eu-2026-docs-panel && npm run build:kccn-india-2026-mentorship",
     "build:kccn-eu-2026-agentic-ai": "mkdir -p dist/kccn-eu-2026/images && marp KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/slides.md --html --theme-set themes/cncf/cncf.css themes/maintainer-summit-2026/maintainer-summit-2026.css -o dist/kccn-eu-2026/index.html && cp -r themes/maintainer-summit-2026/images/. dist/kccn-eu-2026/images/",
     "build:kccn-eu-2026-docs-panel": "mkdir -p dist/kccn-eu-2026-docs-panel/images && marp KCCN-EU-Maintainer-Summit-2026/docs-panel/presentation/slides.md --html --theme-set themes/cncf/cncf.css themes/maintainer-summit-2026/maintainer-summit-2026.css -o dist/kccn-eu-2026-docs-panel/index.html && cp -r themes/maintainer-summit-2026/images/. dist/kccn-eu-2026-docs-panel/images/",
+    "build:kccn-india-2026-mentorship": "mkdir -p dist/kccn-india-2026 && marp KCCN-India-2026/mentorship/presentation/slides.md --html --theme-set themes/cncf/cncf.css -o dist/kccn-india-2026/index.html",
     "preview": "npm run build && netlify dev",
     "preview:kccn-eu-2026-agentic-ai": "mkdir -p KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/images && cp -r themes/maintainer-summit-2026/images/* KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/images && marp KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/slides.md --html --theme-set themes/cncf/cncf.css themes/maintainer-summit-2026/maintainer-summit-2026.css --preview",
-    "preview:kccn-eu-2026-docs-panel": "mkdir -p KCCN-EU-Maintainer-Summit-2026/docs-panel/presentation/images && cp -r themes/maintainer-summit-2026/images/* KCCN-EU-Maintainer-Summit-2026/docs-panel/presentation/images && marp KCCN-EU-Maintainer-Summit-2026/docs-panel/presentation/slides.md --html --theme-set themes/cncf/cncf.css themes/maintainer-summit-2026/maintainer-summit-2026.css --preview"
+    "preview:kccn-eu-2026-docs-panel": "mkdir -p KCCN-EU-Maintainer-Summit-2026/docs-panel/presentation/images && cp -r themes/maintainer-summit-2026/images/* KCCN-EU-Maintainer-Summit-2026/docs-panel/presentation/images && marp KCCN-EU-Maintainer-Summit-2026/docs-panel/presentation/slides.md --html --theme-set themes/cncf/cncf.css themes/maintainer-summit-2026/maintainer-summit-2026.css --preview",
+    "preview:kccn-india-2026-mentorship": "marp KCCN-India-2026/mentorship/presentation/slides.md --html --theme-set themes/cncf/cncf.css --preview",
+    "serve:kccn-india-2026-mentorship": "marp KCCN-India-2026/mentorship/presentation/ --html --theme-set themes/cncf/cncf.css --server"
   },
   "author": "Nate W.",
   "license": "Apache-2.0 AND CC-BY-4.0",

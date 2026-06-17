@@ -4,6 +4,10 @@ Presentation decks built with [Marp](https://marp.app/).
 
 ## Talks
 
+- **Getting Started with CNCF Mentorship: A Guide for Future Mentees**  
+  KubeCon + CloudNativeCon India 2026 · Mumbai · June 18, 2026  
+  [slides](KCCN-India-2026/mentorship/presentation/slides.md?plain=1) · [live deck](https://nate-double-u-talks.netlify.app/kccn-india-2026/) · [sched](https://kccncind2026.sched.com/event/2P1Bl/getting-started-with-cncf-mentorship-a-guide-for-future-mentees)
+
 - **Agentic AI for Maintainers: Getting the Most from GitHub Copilot Enterprise**  
   KubeCon EU 2026 · Maintainer Summit · Amsterdam · March 22, 2026  
   [slides](KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/slides.md?plain=1) · [live deck](https://nate-double-u-talks.netlify.app/kccn-eu-2026/) · [PDF](https://github.com/nate-double-u/talks/releases/download/kccn-eu-2026-agentic-ai-v2/agentic-ai-for-maintainers.pdf) · [video](https://youtu.be/x96duUfIJXk) · [sched](https://maintainersummiteu2026.sched.com/event/2EWes/agentic-ai-for-maintainers-getting-the-most-from-github-copilot-enterprise-nate-waddington-cncf)
