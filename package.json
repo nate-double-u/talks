@@ -5,6 +5,8 @@
   "description": "Presentation decks built with Marp",
   "scripts": {
     "build": "npm run build:talks && cp landing/index.html dist/index.html",
+    "test": "node --test scripts/",
+    "validate:assets": "node scripts/check-dist-assets.mjs",
     "build:talks": "npm run build:kccn-eu-2026-agentic-ai && npm run build:kccn-eu-2026-docs-panel && npm run build:kccn-india-2026-mentorship",
     "build:kccn-eu-2026-agentic-ai": "mkdir -p dist/kccn-eu-2026/images && marp KCCN-EU-Maintainer-Summit-2026/agentic-ai/presentation/slides.md --html --theme-set themes/cncf/cncf.css themes/maintainer-summit-2026/maintainer-summit-2026.css -o dist/kccn-eu-2026/index.html && cp -r themes/maintainer-summit-2026/images/. dist/kccn-eu-2026/images/",
     "build:kccn-eu-2026-docs-panel": "mkdir -p dist/kccn-eu-2026-docs-panel/images && marp KCCN-EU-Maintainer-Summit-2026/docs-panel/presentation/slides.md --html --theme-set themes/cncf/cncf.css themes/maintainer-summit-2026/maintainer-summit-2026.css -o dist/kccn-eu-2026-docs-panel/index.html && cp -r themes/maintainer-summit-2026/images/. dist/kccn-eu-2026-docs-panel/images/",
