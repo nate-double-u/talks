@@ -4,7 +4,7 @@
   "private": true,
   "description": "Presentation decks built with Marp",
   "scripts": {
-    "build": "npm run build:talks && cp landing/index.html dist/index.html",
+    "build": "npm test && npm run build:talks && cp landing/index.html dist/index.html && npm run validate:assets",
     "test": "node --test --experimental-test-coverage scripts/",
     "validate:assets": "node scripts/check-dist-assets.mjs",
     "build:talks": "npm run build:kccn-eu-2026-agentic-ai && npm run build:kccn-eu-2026-docs-panel && npm run build:kccn-india-2026-mentorship",
